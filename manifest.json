@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Copy Code",
+  "version": "1.0",
+  "description": "Add Copy buttons to code blocks on StackOverflow (enhanced)",
+  "icons": { "48": "logo.png" },
+  "permissions": ["contextMenus", "storage", "scripting", "activeTab"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["*://*.stackoverflow.com/*"],
+      "js": ["main.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "copy-selection": {
+      "suggested_key": { "default": "Ctrl+Shift+C" },
+      "description": "Copy selected code (clean)"
+    }
+  }
+}

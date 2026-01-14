@@ -1,0 +1,31 @@
+.copy-code-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 6px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 9999;
+  border: none;
+  background: #0a74da;
+  color: #fff;
+  border-radius: 4px;
+  opacity: 0.95;
+}
+.copy-code-btn:hover { opacity: 1; }
+
+/* toast */
+.copy-toast {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 200ms ease;
+  pointer-events: none;
+}
+.copy-toast.visible { opacity: 1; transform: translateY(0); }
